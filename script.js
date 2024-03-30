@@ -65,6 +65,7 @@ const createStudentList = () => {
     student.push(item.value)
     item.value = ''
   })
+  console.log(student)
   students.push(new Student(...student))
   $element.textContent = ''
   render($element)
@@ -72,6 +73,7 @@ const createStudentList = () => {
 
 const render = (el) => {
   students.forEach((item,i) => {
+    console.log(item)
     el.innerHTML += `
       <li class="student">
         <h3>Student: №${i + 1}</h3>

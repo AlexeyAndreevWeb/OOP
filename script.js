@@ -1,29 +1,3 @@
-// class Animal {
-//   constructor(options) {
-//     this.name = options.name,
-//     this.age = options.age,
-//     this.hasTail = options.hasTail
-//   }
-
-//   voice() {
-//     console.log('I,m animal')
-//   }
-// }
-
-// const animal = new Animal({
-//   name: 'animal',
-//   age: 5,
-//   hasTail: true
-// })
-
-// class Cat extends Animal{}
-
-// const cat = new Cat({
-//   name: 'Cat',
-//   age: 7,
-//   hasTail: true
-// })
-
 // Задание 1: ""Управление библиотекой книг""
 
 // Реализуйте класс Book, представляющий книгу, со следующими свойствами и методами:

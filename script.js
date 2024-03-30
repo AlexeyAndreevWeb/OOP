@@ -36,10 +36,10 @@ const book1 = new Book({
 // Метод displayInfo() - выводит информацию о студенте (имя, возраст и класс).
 
 class Student {
-  constructor(name, age,grade) {
-    this.name = name
-    this.age = age
-    this.grade = grade
+  constructor(name, age, grade) {
+    this.name = name;
+    this.age = age;
+    this.grade = grade;
   }
 
   displayInfo() {
@@ -49,4 +49,38 @@ class Student {
   }
 }
 
-const student1 = new Student('John Smith',16,'10th grade')
+const students = []
+
+const addButton = document.querySelector('.button')
+addButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  createStudentList();
+})
+
+const createStudentList = () => {
+  let $element = document.querySelector('.students-list')
+  let student = []
+  const inputs = document.querySelectorAll('.form > input')
+  inputs.forEach(item => {
+    student.push(item.value)
+    item.value = ''
+  })
+  students.push(new Student(...student))
+  $element.textContent = ''
+  render($element)
+};
+
+const render = (el) => {
+  students.forEach((item,i) => {
+    el.innerHTML += `
+      <li class="student">
+        <h3>Student: №${i+1}</h3>
+        <p class="student__name">Name: ${item.name}</p>
+        <p class="student__age">Age: ${item.age}</p>
+        <p class="student__grade">Grade: ${item.grade}</p>
+      </li>
+    `
+  })
+}
+
+

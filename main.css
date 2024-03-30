@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 300px;
+  padding: 25px;
+}
+
+.form label {
+  display: flex;
+  justify-content: right;
+  gap: 15px;
+}
+
+.button {
+  background: #000;
+  color: #fff;
+}
+
+.students-list {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  gap: 5px;
+  width: 500px;
+}
+
+.student {
+  border: 1px solid teal;
+  list-style: none;
+  padding: 10px 40px;
+}

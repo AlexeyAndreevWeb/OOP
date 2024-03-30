@@ -60,7 +60,7 @@ addButton.addEventListener('click', (e) => {
 const createStudentList = () => {
   let $element = document.querySelector('.students-list')
   let student = []
-  const inputs = document.querySelectorAll('.form > input')
+  const inputs = document.querySelectorAll('.form > label > input')
   inputs.forEach(item => {
     student.push(item.value)
     item.value = ''
@@ -74,7 +74,7 @@ const render = (el) => {
   students.forEach((item,i) => {
     el.innerHTML += `
       <li class="student">
-        <h3>Student: №${i+1}</h3>
+        <h3>Student: №${i + 1}</h3>
         <p class="student__name">Name: ${item.name}</p>
         <p class="student__age">Age: ${item.age}</p>
         <p class="student__grade">Grade: ${item.grade}</p>
